@@ -1,0 +1,5 @@
+# Flask-specific files
+.pytest_cache/
+__pycache__/
+database.db  # Assuming you're using a database file
+*env  # Ignore all files ending with "env" (e.g., .env, venv)

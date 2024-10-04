@@ -1,0 +1,53 @@
+{
+    "7": [
+        {
+            "title": "Ergebnisse Der Biologie",
+            "author": "H. Autrum, E. B\u00fcnning, K. v. Frisch, E. Hadorn, A. K\u00fchn, E. Mayr, A. Pirson, J. Straub, H. Stubbe, W. Weidel, Hansjochem Autrum",
+            "isbn": "9783642948053",
+            "publication_year": "2013-03-13",
+            "category": "Biologie",
+            "learning": "ggh",
+            "current_page": 55
+        }
+    ],
+    "8": [
+        {
+            "title": "Histologie der Tiere",
+            "author": "Heinz Streble, Annegret B\u00e4uerle",
+            "isbn": "9783662531600",
+            "publication_year": "2016-10-03",
+            "category": "Biologie",
+            "current_page": 12,
+            "learning": "Arschloch"
+        },
+        {
+            "title": "Biologie der Tiere",
+            "author": "Reinhold von Hanstein",
+            "isbn": "UIUC:30112069462296",
+            "publication_year": "1929",
+            "category": "Biologie",
+            "current_page": 13
+        },
+        {
+            "title": "Alles \u00fcber Astronomie",
+            "author": "Mark Emmerich, Sven Melchert",
+            "isbn": "9783440503720",
+            "publication_year": "2021-05-14",
+            "category": "Astronomie"
+        },
+        {
+            "title": "Welcher Stern ist das?",
+            "author": "Joachim Herrmann",
+            "isbn": "3440091678",
+            "publication_year": "2002",
+            "category": "Astronomie"
+        },
+        {
+            "title": "Von G\u00f6ttern und Sternen",
+            "author": "Kathrin Bernard",
+            "isbn": "9783958800953",
+            "publication_year": "2016-08-04",
+            "category": "Astronomie"
+        }
+    ]
+}

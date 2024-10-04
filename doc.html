@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Application Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        code {
+            background-color: #e0e0e0;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Learning Application Documentation</h1>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>This Flask application allows users to register, log in, search for books, add them to their favorites, and manage bookmarks. It also provides functionality to save learning notes for favorite books.</p>
+    </div>
+
+    <div class="section">
+        <h2>Routes</h2>
+        <h3><code>/</code> (GET)</h3>
+        <p>Displays the homepage.</p>
+
+        <h3><code>/register</code> (GET, POST)</h3>
+        <p>Handles user registration. Users submit a <code>username</code> and <code>password</code> via POST. The application stores these in the database and redirects to the login page.</p>
+
+        <h3><code>/login</code> (GET, POST)</h3>
+        <p>Handles user login. Authenticates the user based on the credentials provided. On successful login, stores the <code>user_id</code> in the session and redirects to the search page.</p>
+
+        <h3><code>/logout</code> (GET)</h3>
+        <p>Logs the user out by clearing their session and redirects to the homepage.</p>
+
+        <h3><code>/search</code> (GET, POST)</h3>
+        <p>Displays the search form for books. Users can search by field of interest and specific topic. Results are retrieved from the Google Books API and displayed.</p>
+
+        <h3><code>/favorites</code> (GET)</h3>
+        <p>Displays the user's favorite books. Supports optional filtering by category via query parameters.</p>
+
+        <h3><code>/remove_favorites</code> (POST)</h3>
+        <p>Removes selected favorite books for the current user. The user must be logged in to access this route.</p>
+
+        <h3><code>/add_favorite</code> (POST)</h3>
+        <p>Adds selected books to the user's favorites list. Expects book details (title, author, ISBN, publication year, and category) from the form.</p>
+
+        <h3><code>/bookmark</code> (GET)</h3>
+        <p>Displays the user's bookmarks. Only accessible for logged-in users.</p>
+
+        <h3><code>/update_favorite_page</code> (POST)</h3>
+        <p>Updates the current page number for a book in the user's favorites. The page number is stored and can be updated as the user progresses through the book.</p>
+
+        <h3><code>/learnings</code> (GET, POST)</h3>
+        <p>Displays and allows saving of learning notes related to the user's favorite books.</p>
+
+        <h3><code>/test_json_favorites</code> (GET)</h3>
+        <p>Test route to display the contents of the favorites JSON file.</p>
+    </div>
+
+    <div class="section">
+        <h2>Session Management</h2>
+        <p>Session management is handled using Flask's session mechanism. The user's session is tracked using <code>session['user_id']</code>, which stores the user's ID after login. This enables the application to personalize views like favorites and bookmarks.</p>
+        <p>For security, the app uses a <code>secret_key</code> to sign the session data, ensuring that it can't be tampered with by the user.</p>
+    </div>
+
+    <div class="section">
+        <h2>Dependencies</h2>
+        <ul>
+            <li><code>Flask</code>: The main framework used to build the web application.</li>
+            <li><code>database</code>: Custom module for database interactions, such as user registration, authentication, and table creation.</li>
+            <li><code>google_books_api</code>: Custom module that interfaces with the Google Books API to search for books.</li>
+            <li><code>json_storage</code>: Custom module used for storing and managing user favorites and bookmarks in a JSON file.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Backend Explanation</h2>
+        <h3>google_books_api</h3>
+        <p>This module is responsible for fetching book data from the Google Books API based on user input (field of interest and topic).</p>
+
+        <h3>json_storage</h3>
+        <p>This module handles saving and loading user favorites, bookmarks, and learning notes from a JSON file. It provides methods for saving favorite books, removing favorites, and updating bookmarks.</p>
+    </div>
+
+    <footer>
+        <p>Thang, Tim and Paul | 2024</p>
+    </footer>
+
+</body>
+</html>
